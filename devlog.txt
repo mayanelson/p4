@@ -1,12 +1,11 @@
+Yammers
+Maya Nelson
+Ameer Alnasser
+Sam Cowan
 
-<Team Name (minus "team")>
-<Member Bubbles>
-<Member Buttercup>
-<Member Blossom>
-pd <pd#>
+pd 2
 ---------------------
-<Project Title/Description>
-
+NYC Higher Lower
 
  ______   ______   __   __   __       ______   _______     
 /_____/\ /_____/\ /_/\ /_/\ /_/\     /_____/\ /______/\    
@@ -19,7 +18,10 @@ pd <pd#>
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
 
-fristL -- TIMESTAMP
+ameerA -- 8:47
 --------------------------------------------------------------
-<Thing fristL did.>
+Noted our feedback from devlog, we need to:
+explain better what data sets are
+data table is confusing and not really complete
+bootstrap or foundation?
 ==============================================================

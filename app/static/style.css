@@ -4,12 +4,11 @@ stylesheet so we could customize our site to our liking */
 /* NAVBAR ================================================ */
 
 .navbar {
-    /* background-color:#FF4545; */
-    /* background-image: url("https://as1.ftcdn.net/v2/jpg/02/97/70/52/1000_F_297705296_6dftgLSX22tzyOqF113lrrzDa16YjD7g.jpg"); */ 
-    background-image: url("images/redcandycane.jpeg");
+    background-color:#49B8F8
 }
+
 .navbar-brand {
-    color:#01796F;
+    color:#15598E;
     font-size: 25px;
     padding-left: 20px;
     text-shadow:
@@ -27,7 +26,7 @@ stylesheet so we could customize our site to our liking */
 /* BODY ==================================================== */
 
 .body { 
-    background: url("images/snow2.gif"), #87F398;
+    background: #AADBF7;
 }
 .body-center {
     margin-right: 20vw;
@@ -37,87 +36,27 @@ stylesheet so we could customize our site to our liking */
 /* LANDING PAGE ============================================ */
 
 .home-heading {
-    color: #87F398;
+    color: #15598E;
+    padding-left: 20px;
 }
 .description {
-    background-image: url("images/blue-snowfall.gif");
     opacity:0.7;
     color:white;
     padding:30px;
     font-size: 20px;
 }
-.login-button {
+
+.home-button {
     margin-right: 30px;
-    background-color: #F9EF47;
-}
-.team-name {
-    color:#FF4545;
-}
-.disclaimer {
-    color:#FFCCCB;
-    font-size:15px
-}
-
-/* TOP TRACKS PAGE ========================================= */
-
-.time-button {
-    padding:10px;
-    font-size: medium;
-    background-color: #87F398;
-    color:#01796F;
-    border: none;
-}
-.tracks-pick-font {
-    color:white;
-}
-.trackslist {
-    color:white;
-}
-.trackslist-lyrics {
-    color:#FFCCCB;
-    font-family: "Lucida Console", "Courier New", monospace;
-}
-.track-form-note {
-    color:#FFCCCB;
-    font-size: small;
-    font-family: 'Courier New', Courier, monospace;
-    letter-spacing: 2px;
-}
-.track-form-note-h {
-    color:#FFCCCB;
-}
-
-/* CHOOSE TOP TRACKS/ARTISTS PAGE ========================== */
-
-.big-button {
-    margin-right: 30px;
-    background-color: #FF4545;
+    background-color: white;
     font-size: 40px;
     font-family: 'Courier New', monospace;
-    color: white;
-}
-.stats-heading {
-    color: white;
+    color: #15598E;
 }
 
-.form-label {
-    color:white;
+.login-button {
+    margin-right: 30px;
+    background-color: white;
 }
-
-.big-text {
-    font-size: 70px;
-}
-
-.track-title {
-    color:#FFCCCB;
-    font-family: 'Courier New', Courier, monospace;
-}
-
-.lyrics-body {
-    color:white;
-    font-family: 'Courier New', Courier, monospace;
-}
-
-
 
 

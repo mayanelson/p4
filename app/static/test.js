@@ -7,7 +7,7 @@ if (button == null) {
 }
 else {
 button.addEventListener("click", function() {
-    document.getElementById("para").innerHTML = "Hello World";
+    document.getElementById("para").innerHTML = "insert game here";
     console.log("button clicked");
   });
 }

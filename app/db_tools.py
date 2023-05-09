@@ -24,8 +24,8 @@ def query(sql, extra = None):
 def create_table(name, header):
     query(f"CREATE TABLE IF NOT EXISTS {name} {header}")
 
-create_table("StoryInfo", stories_header)
-create_table("UserInfo", users_header)
+create_table("DBInfo", db_header)
+#create_table("UserInfo", users_header)
 
 def get_table_list(tableName):
     db = sqlite3.connect(DB_FILE, check_same_thread=False)

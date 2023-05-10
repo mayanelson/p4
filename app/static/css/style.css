@@ -64,4 +64,7 @@ stylesheet so we could customize our site to our liking */
     width: 360px;
 }
 
-
+.higherLowerButton {
+    width: 300px;
+    Height: 150px;
+}

@@ -43,6 +43,11 @@ mayaN -- 2023-05-05 9:10
 worked on CSS connectivity
 ==============================================================
 
+samL-- 2023-05-05 9:12
+--------------------------------------------------------------
+worked on making tools to parse datasets with
+==============================================================
+
 ameerA, samC, samL, mayaN -- 2023-05-05 9:15
 --------------------------------------------------------------
 Worked on deliverables of design doc, dev log
@@ -61,4 +66,20 @@ Worked on pandas data manipulation with citywide payroll data
 samC -- 2023-05-08 22:00
 --------------------------------------------------------------
 worked on using opendata api to access data rather than downloaded csv
+==============================================================
+
+
+samL -- 2023-05-09 9:30
+--------------------------------------------------------------
+worked on tools using the sqlite database. 
+==============================================================
+
+samL -- 2023-05-09 22:00
+--------------------------------------------------------------
+PLAN TO PIPELINE DATA: Data will be loaded by various python 
+scrips into our sqlite database.  The flask app will reference
+this dataset when it needs to retrieve some information to
+display to the user for a game.  All data should be neatly
+preprocessed into a single sqlite table which the flask app 
+can access with a few simple and easy to use functions.
 ==============================================================

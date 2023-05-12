@@ -22,36 +22,32 @@
             <form action="/">
                 <input class ="btn-primary btn-lg btn-block body-center text-center" type="submit" value = "im done go back">
             </form>
-            <h1 class="home-heading">Time to play! </h1>"
+            <h1 class="heading">Time to play! </h1>
 
         <br>
-        <!-- doesn't work !!! -->
-        <script src="static/js/test.js">
-            const f(){
-                var a = sample;
-                var b = sample2;
-      
-                var str = a + "is HIGHER or LOWER than" + b;
-      
-                document.getElementById('text').innerHTML = str;
-                console.log("WORKED");
-            }
-            f();
-        </script>
-        <h1 id="text" onload="f()">  </h2>
+
+        <h1 id="text">  </h2>
             <br>
         <!--BOX AROUND THIS AND BOOTSTRAP BUTTON-->
         <script src="static/js/test.js"></script>
-        <div class="text-center description body-center rounded">
-            <button id="higherButton" class="btn higherLowerButton btn-primary btn-lg btn-block body-center" type="button">HIGHER</button>
-            <button id="lowerButton" class="btn higherLowerButton btn-primary btn-lg btn-block body-center" type="button">LOWER</button>
+        <div class="text-center description body-center">
+            <button id="higherButton" class="btn higherLowerButton btn-primary btn-lg btn-block" type="button">HIGHER</button>
+            <br> <br>
+            <button id="lowerButton" class="btn higherLowerButton btn-primary btn-lg btn-block " type="button">LOWER</button>
+            <br> <br>
             <p id="para">  </p>
         </div>
 
-        <br>  
+        <button id="nextButton" onClick="window.location.reload();" class="btn btn-primary btn-lg btn-block body-center" type="button">next one please</button>
+        
+        <br>
+        <br>
+
         <form action="/map">
             <input class ="btn-primary btn-lg btn-block body-center text-center" type="submit" value = "show me cool map">
         </form>
+
+
 <br>
         
     </body>

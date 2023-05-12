@@ -39,10 +39,13 @@ stylesheet so we could customize our site to our liking */
     color: #15598E;
     padding-left: 20px;
 }
+
+.heading{
+    color: #15598E;
+}
 .description {
     opacity:0.7;
     color:white;
-    padding:30px;
     font-size: 20px;
 }
 
@@ -55,7 +58,6 @@ stylesheet so we could customize our site to our liking */
 }
 
 .login-button {
-    margin-right: 30px;
     background-color: white;
 }
 

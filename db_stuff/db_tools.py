@@ -26,6 +26,8 @@ def create_table(name, header):
 
 create_table("DBInfo", db_header)
 #create_table("UserInfo", users_header)
+create_table("Police", db_header)
+create_table("Water_Fountains", db_header)
 
 def get_table_list(tableName):
     db = sqlite3.connect(DB_FILE, check_same_thread=False)
@@ -65,8 +67,12 @@ def get_db_data(db_name):
     return -1
 def add_db_data(db_name, db_data):
     if not(db_exists(db_name)):
-        query("INSERT INTO DBInfo VALUES (?, ?, ?, ?, ?)", (db_data[0], db_data[1], db_data[2], db_data[3], db_data[4]))
+        print("adding?")
+        print(query(f"INSERT INTO {db_name} VALUES (?, ?, ?, ?, ?)", (db_data[0], db_data[1], db_data[2], db_data[3], db_data[4])))
     else:
+        #create_table(db_name. db_header)
+        #add_db_data(db_name, db_data)
+        print("did not add")
         return -1
 def update_db_data(db_name, db_data):
     if db_exists(db_name):

@@ -10,7 +10,7 @@ DB_FILE = "data.db"
 
 stories_header = "(storyName TEXT, fullStory TEXT, lastAdded TEXT, Contributors TEXT)"
 users_header = ("(username TEXT, password TEXT)")
-db_header = ("(Brookyln TEXT, Bronx TEXT, Manhattan TEXT, Queens TEXT, Staten Island TEXT)")
+db_header = ("(Name TEXT, Brookyln TEXT, Bronx TEXT, Manhattan TEXT, Queens TEXT, Staten Island TEXT)")
 def query(sql, extra = None):
     db = sqlite3.connect(DB_FILE, check_same_thread=False)
     c = db.cursor()
@@ -68,7 +68,7 @@ def get_db_data(db_name):
 def add_db_data(db_name, db_data):
     if not(db_exists(db_name)):
         print("adding?")
-        print(query(f"INSERT INTO {db_name} VALUES (?, ?, ?, ?, ?)", (db_data[0], db_data[1], db_data[2], db_data[3], db_data[4])))
+        print(query(f"INSERT INTO DBInfo VALUES (?, ?, ?, ?, ?, ?)", (db_name, db_data[0], db_data[1], db_data[2], db_data[3], db_data[4])))
     else:
         #create_table(db_name. db_header)
         #add_db_data(db_name, db_data)

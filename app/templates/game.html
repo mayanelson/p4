@@ -27,8 +27,15 @@
         <br>
 
         <h1 id="text">  </h2>
-            <br>
+            <br>    
         <!--BOX AROUND THIS AND BOOTSTRAP BUTTON-->
+        <script type="text/javascript">
+            var db_name = "{{ db_name   }}"
+            var boro_name1 = "{{boro_keys[0]}}"
+            var boro_name2 = "{{boro_keys[1]}}"
+            var boro_data1 = {{boro_data[0]}}
+            var boro_data2 = {{boro_data[1]}}
+        </script>
         <script src="static/js/test.js"></script>
         <div class="text-center description body-center">
             <button id="higherButton" class="btn higherLowerButton btn-primary btn-lg btn-block" type="button">HIGHER</button>

@@ -1,14 +1,15 @@
 // make button work
-
 window.addEventListener("DOMContentLoaded", (event) => {
   var hButton = document.getElementById("higherButton"); 
   var lButton = document.getElementById("lowerButton"); 
   var nextButton = document.getElementById("nextButton");
-  var sample = Math.floor(Math.random()*10000);
-  var sample2 = Math.floor(Math.random()*10000);
+  var sample = boro_data1
+  var sample2 = boro_data2
+  console.log()
+  var str = `are there more ${db_name} in ${boro_name1} or ${boro_name2}`
 
-  var str = sample + " is HIGHER or LOWER than " + sample2;
-
+  hButton.innerHTML = boro_name1
+  lButton.innerHTML = boro_name2
   var clicked = false;
 
   
@@ -67,4 +68,3 @@ nextButton.addEventListener("click", function() {
   });
 }
   });
-  

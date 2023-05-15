@@ -1,6 +1,4 @@
-
- 
-
+from random import sample
 import sqlite3
 
 DB_FILE = "data.db"
@@ -8,6 +6,7 @@ DB_FILE = "data.db"
 #db = sqlite3.connect(DB_FILE, check_same_thread=False) #sqlite3.connect(DB_FILE)
 #c = db.cursor()
 
+boros = ["Brooklyn", "Bronx", "Manhattan", "Queens", "Staten Island"]
 stories_header = "(storyName TEXT, fullStory TEXT, lastAdded TEXT, Contributors TEXT)"
 users_header = ("(username TEXT, password TEXT)")
 db_header = ("(Name TEXT, Brookyln TEXT, Bronx TEXT, Manhattan TEXT, Queens TEXT, Staten Island TEXT)")
@@ -58,7 +57,14 @@ def verify_account(username, password):
         if account[0] == username and account[1] == password:
             return True
     return False
-
+def get_random_data():
+    dbs = get_table_list("DBInfo")
+    n_rows = len(dbs)
+    data_index = sample(range(n_rows), 1)[0]
+    return dbs[data_index]
+def get_random_boros(boro_data):
+    boro_indices = sample(range(len(boros)), 2)
+    return {boros[boro_indices[0]]: boro_data[boro_indices[0]], boros[boro_indices[1]]: boro_data[boro_indices[1]]}
 def get_db_data(db_name):
     dbs = get_table_list("DBInfo")
     for db in dbs:

@@ -25,7 +25,7 @@ client = Socrata("data.cityofnewyork.us", "qE4zlRbUa5QqMb2dbqEMQiCse")
 sumMode = True
 richmond = True
 connection_id = "wxhr-qbhz" 
-results = client.get(connection_id, limit=100000)
+results = client.get(connection_id, limit=10000000)
 results_df = pd.DataFrame.from_records(results)
 print(results_df.columns)
 borough_label = "borough"

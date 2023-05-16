@@ -18,7 +18,7 @@ client = Socrata("data.cityofnewyork.us", "qE4zlRbUa5QqMb2dbqEMQiCse")
 sumMode = False
 richmond = True
 connection_id = "k397-673e" 
-results = client.get(connection_id, limit=100000, fiscal_year=2022, pay_basis="per Annum")
+results = client.get(connection_id, limit=100000000, fiscal_year=2022, pay_basis="per Annum")
 results_df = pd.DataFrame.from_records(results)
 print(results_df.columns)
 borough_label = "work_location_borough"
@@ -55,4 +55,4 @@ else:
 borose = [Brooklyn, Bronx, Manhattan, Queens, StatenIsland]
 print(borose)
 
-db_tools.add_db_data("total payroll", borose)
+db_tools.add_db_data("Average_Pay", borose)

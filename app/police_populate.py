@@ -26,14 +26,16 @@ client = Socrata("data.cityofnewyork.us", "qE4zlRbUa5QqMb2dbqEMQiCse")
 sumMode = True
 richmond = False
 connection_id = "qgea-i56i" 
-results = client.get(connection_id, limit=1000)
+results = client.get(connection_id, limit=1000000)
 results_df = pd.DataFrame.from_records(results)
 print(results_df.columns)
 borough_label = "boro_nm"
+print("Starting summing")
 if(sumMode):
 # Convert to pandas DataFrame
     id_label = "cmplnt_num"
-    data_by_borough = results_df.groupby(borough_label)[id_label].count()
+
+    data_by_borough = results_df[borough_label].value_counts()
     print(data_by_borough)
     
     #print(permits_by_borough)

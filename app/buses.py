@@ -31,7 +31,7 @@ client = Socrata("data.cityofnewyork.us", "qE4zlRbUa5QqMb2dbqEMQiCse")
 sumMode = True
 richmond = False
 connection_id = "ez4e-fazm"
-results = client.get(connection_id, limit=1000, breakdown_or_running_late="Breakdown")
+results = client.get(connection_id, limit=10000000, breakdown_or_running_late="Breakdown")
 results_df = pd.DataFrame.from_records(results)
 print(results_df.columns)
 borough_label = "boro"
@@ -76,4 +76,4 @@ else:
 borose = [Brooklyn, Bronx, Manhattan, Queens, StatenIsland]
 print(borose)
 
-db_tools.add_db_data("Buses2", borose)
+db_tools.add_db_data("Buses", borose)

@@ -41,4 +41,4 @@ else:
 borose = [Brooklyn, Bronx, Manhattan, Queens, StatenIsland]
 print(borose)
 
-db_tools.add_db_data("recycling_bins2", borose)
+db_tools.add_db_data("recycling_bins", borose)

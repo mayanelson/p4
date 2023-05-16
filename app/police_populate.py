@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+import sys
 import db_tools
 import math
 from sodapy import Socrata
@@ -23,17 +24,18 @@ client = Socrata("data.cityofnewyork.us", "qE4zlRbUa5QqMb2dbqEMQiCse")
 # First 2000     results, returned as JSON from API / converted to Python list of
 # dictionaries by sodapy.
 sumMode = True
-richmond = True
-connection_id = "wxhr-qbhz" 
-results = client.get(connection_id, limit=10000000)
+richmond = False
+connection_id = "qgea-i56i" 
+results = client.get(connection_id, limit=1000)
 results_df = pd.DataFrame.from_records(results)
 print(results_df.columns)
-borough_label = "borough"
+borough_label = "boro_nm"
 if(sumMode):
 # Convert to pandas DataFrame
-    id_label = "ampsid"
+    id_label = "cmplnt_num"
     data_by_borough = results_df.groupby(borough_label)[id_label].count()
     print(data_by_borough)
+    
     #print(permits_by_borough)
 #print(results_df.shape)
 # results = [0,0,0,0,0,0]
@@ -54,14 +56,15 @@ else:
 
     print(data_by_borough)
     # write a list combining the means of the three types of income by borough. Note that there are additional datapoints to the five boroughs of NYC
-Brooklyn = str(data_by_borough["B"])
-Manhattan = str(data_by_borough["M"])
-Queens = str(data_by_borough["Q"])
-Bronx = str(data_by_borough["X"])
+Brooklyn = str(data_by_borough["BROOKLYN"])
+Manhattan = str(data_by_borough["MANHATTAN"])
+Queens = str(data_by_borough["QUEENS"])
+Bronx = str(data_by_borough["BRONX"])
 if(richmond):
-    StatenIsland = str(data_by_borough["R"])
+    StatenIsland = str(data_by_borough["RICHMOND"])
 else:
     StatenIsland = str(data_by_borough["STATEN ISLAND"])
 borose = [Brooklyn, Bronx, Manhattan, Queens, StatenIsland]
 print(borose)
-db_tools.add_db_data("Water_Fountains", borose)
+
+db_tools.add_db_data("Police", borose)

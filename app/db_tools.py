@@ -62,6 +62,7 @@ def get_random_data():
     n_rows = len(dbs)
     data_index = sample(range(n_rows), 1)[0]
     return dbs[data_index]
+
 def get_random_boros(boro_data):
     boro_indices = sample(range(len(boros)), 2)
     return {boros[boro_indices[0]]: boro_data[boro_indices[0]], boros[boro_indices[1]]: boro_data[boro_indices[1]]}

@@ -6,7 +6,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
   var sample = boro_data1
   var sample2 = boro_data2
   console.log()
-  var str = `are there more ${db_name} in ${boro_name1} or ${boro_name2}`
+  var str = `${db_name} ${boro_name1} or ${boro_name2}`
 
   hButton.innerHTML = boro_name1
   lButton.innerHTML = boro_name2

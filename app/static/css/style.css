@@ -70,3 +70,6 @@ stylesheet so we could customize our site to our liking */
     width: 300px;
     Height: 150px;
 }
+a{
+    text-decoration:none;
+}

@@ -14,7 +14,8 @@ def game():
     boro_data = db_tools.get_random_boros(data[1:])
     print(boro_data)
     boro_keys = list(boro_data)
-    return render_template('game.html', db_name=data[0], boro_data=list(boro_data.values()), boro_keys=boro_keys)
+    converted_name = db_tools.convert_name(data[0])
+    return render_template('game.html', db_name=converted_name, boro_data=list(boro_data.values()), boro_keys=boro_keys)
 
 # redirect to map
 @app.route("/map", methods=["GET","POST"])       

@@ -63,12 +63,28 @@ def get_random_data():
     data_index = sample(range(n_rows), 1)[0]
     return dbs[data_index]
 def convert_name(db_name):
-    converter = {}
-    if db_name in converter:
-        return converter[db_name]
+    if db_name == "Average_Pay":
+        return "Is average pay higher in "
     else:
-        print("db name is not valid, conversion could not be completed")
-        return -1
+        s = "Are there more "
+        match db_name:
+            case "Asbestos":
+                s += "asbestos abasements done"
+            case "Buses":
+                s += "bus breakdowns/delays"
+            case "Elevators":
+                s += "elevator permits handed out"
+            case "Film_Permits":
+                s += "film permits handed out"
+            case "rats":
+                s += "rat inspections done"
+            case "recycling_bins":
+                s += "public recycling bins"
+            case "Trees":
+                s += "street trees"
+            case "Water_Fountains":
+                s += "public drinking fountains"
+        s += " in "
 def get_random_boros(boro_data):
     boro_indices = sample(range(len(boros)), 2)
     return {boros[boro_indices[0]]: boro_data[boro_indices[0]], boros[boro_indices[1]]: boro_data[boro_indices[1]]}

@@ -30,13 +30,121 @@
             <div id="map"></div>
 
             <script>
-            var map = L.map('map').setView([40.71, -74.00], 12);
-          
-            // load a tile layer
-            L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+
+var map = L.map('map').setView([40.71, -74.00], 12);
+
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 maxZoom: 19,
-                 attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+                attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
                 }).addTo(map);
+
+L.circleMarker([40.7781, -73.9712], {radius: 20}).addTo(map); //MANHATTAN
+L.circleMarker([40.6782, -73.9442], {radius: 20}).addTo(map); //BROOKLYN
+L.circleMarker([40.7282, -73.7949], {radius: 20}).addTo(map); //QUEENS
+L.circleMarker([40.5795, -74.1502], {radius: 20}).addTo(map); //STATEN ISLAND
+L.circleMarker([40.8448, -73.8648], {radius: 20}).addTo(map); // BRONX
+
+/*
+L = {
+  const L = await require("leaflet@1/dist/leaflet.js");
+  if (!L._style) {
+    const href = await require.resolve("leaflet@1/dist/leaflet.css");
+    document.head.appendChild(L._style = html`<link href=${href} rel=stylesheet>`);
+    document.head.appendChild(html`<style>
+      .leaflet-container {
+        background-color: white;
+      }
+    </style>`);
+  }
+  return L;
+}
+3 = Object {
+  format: ƒ(t)
+  formatPrefix: ƒ(t, n)
+  timeFormat: ƒ(t)
+  timeParse: ƒ(t)
+  utcFormat: ƒ(t)
+  utcParse: ƒ(t)
+  Adder: class
+  Delaunay: class
+  FormatSpecifier: ƒ(t)
+  InternMap: class
+  InternSet: class
+  Voronoi: class
+  active: ƒ(t, n)
+  arc: ƒ()
+  area: ƒ(t, n, e)
+  areaRadial: ƒ()
+  ascending: ƒ(t, n)
+  autoType: ƒ(t)
+  axisBottom: ƒ(t)
+  axisLeft: ƒ(t)
+  … more
+}
+d3 = require("d3@6")
+
+boroughsGeoJSON = Object {
+  type: "FeatureCollection"
+  features: Array(5) [Object, Object, Object, Object, Object]
+}
+
+boroughsGeoJSON = FileAttachment("Borough Boundaries.geojson").json()
+
+boroughCodesAndNames = Array(5) [
+  0: Array(2) [1, "Manhattan"]
+  1: Array(2) [2, "Bronx"]
+  2: Array(2) [3, "Brooklyn"]
+  3: Array(2) [4, "Queens"]
+  4: Array(2) [5, "Staten Island"]
+]
+
+boroughCodesAndNames = [
+  [1, "Manhattan"],
+  [2, "Bronx"],
+  [3, "Brooklyn"],
+  [4, "Queens"],
+  [5, "Staten Island"]
+]
+
+boroughCodes = Array(5) [
+  0: 1
+  1: 2
+  2: 3
+  3: 4
+  4: 5
+]
+
+boroughCodes = boroughCodesAndNames.map(([boroughCode, _]) => boroughCode)
+boroughNamesByCode = Map(5) {1 => "Manhattan", 2 => "Bronx", 3 => "Brooklyn", 4 => "Queens", 5 => "Staten Island"}
+boroughNamesByCode = new Map(boroughCodesAndNames)
+boroughColors = Array(5) ["#66c2a5", "#fc8d62", "#8da0cb", "#e78ac3", "#a6d854"]
+boroughColorsByCode = Map(5) {1 => "#66c2a5", 2 => "#fc8d62", 3 => "#8da0cb", 4 => "#e78ac3", 5 => "#a6d854"}
+boroughColorsByCode = new Map(boroughColors.map((d, i) => [i + 1, d]))
+animationTransitionDurationMs = 1000
+*/
+
+  
+/*
+  L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}{r}.{ext}', {
+    attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    subdomains: 'abcd',
+    ext: 'png'
+  }).addTo(map);
+  
+   function boroughColorForFeature(feature) {
+    // Use + to convert string to integer, since boroughColorsByCode is keyed by integer.
+    return boroughColorsByCode.get(+feature.properties.boro_code);
+  }
+  
+  L.geoJSON(boroughsGeoJSON, {
+    style: function(feature) {
+      const color = boroughColorForFeature(feature);
+      return { color };
+    }
+  }).addTo(map); 
+
+  */
+
           
             </script>
         </div>

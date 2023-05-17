@@ -3,7 +3,11 @@
     <head>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="../static/css/style.css">
-        
+        <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"/>
+        <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+        <style>
+            #map{ width: 900px; height: 500px; }
+        </style>
 
         <div class="navbar navbar-inverse">
             <!--LEFT-ALIGNED HEADER-->
@@ -52,6 +56,24 @@
         <br>
         <br>
 
+
+        <div id="map" style="height:0px" ></div>
+        <script>
+            var map = L.map('map').setView([40.71, -74.00], 12);
+            L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                            maxZoom: 19,
+                            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+                            }).addTo(map);
+            
+            L.circleMarker([40.7781, -73.9712], {radius: 20}).addTo(map); //MANHATTAN
+            L.circleMarker([40.6782, -73.9442], {radius: 20}).addTo(map); //BROOKLYN
+            L.circleMarker([40.7282, -73.7949], {radius: 20}).addTo(map); //QUEENS
+            L.circleMarker([40.5795, -74.1502], {radius: 20}).addTo(map); //STATEN ISLAND
+            L.circleMarker([40.8448, -73.8648], {radius: 20}).addTo(map); // BRONX
+
+        </script> 
+        
+        
         <form action="/map">
             <input class ="btn-primary btn-lg btn-block body-center text-center" type="submit" value = "show me cool map">
         </form>

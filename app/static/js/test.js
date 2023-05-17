@@ -3,6 +3,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
   var hButton = document.getElementById("higherButton"); 
   var lButton = document.getElementById("lowerButton"); 
   var nextButton = document.getElementById("nextButton");
+  var mapDiv = document.getElementById("map")
   var sample = boro_data1
   var sample2 = boro_data2
   console.log()
@@ -32,6 +33,9 @@ window.addEventListener("DOMContentLoaded", (event) => {
           document.getElementById("para").style.color = "red";
       }
       clicked = true;
+      //map.style.display = "inline-block";
+      mapDiv.style.height = "";  
+      map.invalidateSize()
       console.log("higher clicked");
       document.getElementById("nextButton").style.visibility="visible";
     });
@@ -52,6 +56,8 @@ window.addEventListener("DOMContentLoaded", (event) => {
       }
       console.log("lower clicked");
       clicked = true;
+      mapDiv.style.height = "";  
+      map.invalidateSize()  
       document.getElementById("nextButton").style.visibility="visible";
     });
   }

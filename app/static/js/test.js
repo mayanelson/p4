@@ -3,10 +3,11 @@ window.addEventListener("DOMContentLoaded", (event) => {
   var hButton = document.getElementById("higherButton"); 
   var lButton = document.getElementById("lowerButton"); 
   var nextButton = document.getElementById("nextButton");
+  var mappy = document.getElementById("map");
   var sample = boro_data1
   var sample2 = boro_data2
   console.log()
-  var str = `are there more ${db_name} in ${boro_name1} or ${boro_name2}`
+  var str = `Are there more ${db_name} in ${boro_name1} or ${boro_name2}`
 
   hButton.innerHTML = boro_name1
   lButton.innerHTML = boro_name2
@@ -17,6 +18,8 @@ window.addEventListener("DOMContentLoaded", (event) => {
   document.getElementById('text').innerHTML = str;
   console.log("WORKED");
   document.getElementById("nextButton").style.visibility="hidden";
+  document.getElementById("map").style.visibility="hidden";
+
 
   if (hButton == null) {
       console.log("hButton is null");
@@ -34,6 +37,8 @@ window.addEventListener("DOMContentLoaded", (event) => {
       clicked = true;
       console.log("higher clicked");
       document.getElementById("nextButton").style.visibility="visible";
+      document.getElementById("map").style.visibility="visible";
+      document.getElementById("maptitle").innerHTML = "cool map";
     });
   }
   
@@ -53,6 +58,8 @@ window.addEventListener("DOMContentLoaded", (event) => {
       console.log("lower clicked");
       clicked = true;
       document.getElementById("nextButton").style.visibility="visible";
+      document.getElementById("map").style.visibility="visible";
+      document.getElementById("maptitle").innerHTML = "cool map";
     });
   }
 
@@ -65,6 +72,7 @@ nextButton.addEventListener("click", function() {
     console.log("next clicked");
     clicked = false;
     document.getElementById("nextButton").style.visibility="hidden";
+    document.getElementById("map").style.visibility="hidden";
   });
 }
   });

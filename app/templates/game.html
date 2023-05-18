@@ -33,10 +33,11 @@
             var db_name = "{{ db_name   }}"
             var boro_name1 = "{{boro_keys[0]}}"
             var boro_name2 = "{{boro_keys[1]}}"
-            var boro_data1 = {{boro_data[0]}}
-            var boro_data2 = {{boro_data[1]}}
+            var boro_data1 = "{{boro_data[0]}}"
+            var boro_data2 = "{{boro_data[1]}}"
         </script>
         <script src="static/js/test.js"></script>
+
         <div class="text-center description body-center">
             <button id="higherButton" class="btn higherLowerButton btn-primary btn-lg btn-block" type="button">HIGHER</button>
             <br> <br>
@@ -46,13 +47,35 @@
         </div>
 
         <button id="nextButton" onClick="window.location.reload();" class="btn btn-primary btn-lg btn-block body-center" type="button">next one please</button>
-        
+
         <br>
+        <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"/>
+        <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+        <style>
+            #map{ width: 900px; height: 500px; }
+        </style>
         <br>
 
-        <form action="/map">
-            <input class ="btn-primary btn-lg btn-block body-center text-center" type="submit" value = "show me cool map">
-        </form>
+        <h1 class="heading" id="maptitle"> </h1>
+            
+        <div id="map"></div>
+
+        <script>
+
+            var map = L.map('map').setView([40.71, -74.00], 12);
+
+            L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 19,
+                attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+                }).addTo(map);
+
+            L.circleMarker([40.7781, -73.9712], {radius: 20}).addTo(map); //MANHATTAN
+            L.circleMarker([40.6782, -73.9442], {radius: 20}).addTo(map); //BROOKLYN
+            L.circleMarker([40.7282, -73.7949], {radius: 20}).addTo(map); //QUEENS
+            L.circleMarker([40.5795, -74.1502], {radius: 20}).addTo(map); //STATEN ISLAND
+            L.circleMarker([40.8448, -73.8648], {radius: 20}).addTo(map); // BRONX
+
+        </script>
 
 
 <br>

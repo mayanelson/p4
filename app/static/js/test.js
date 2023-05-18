@@ -20,8 +20,7 @@ function makeMap(data){
   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 19,
       attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-      }).addTo(map);
-  bkNormal = data;
+      }).addTo(map);  
   L.circleMarker([40.7781, -73.9712], {radius: boroData[2]}).addTo(map); //MANHATTAN
   L.circleMarker([40.6782, -73.9442], {radius: boroData[0]}).addTo(map); //BROOKLYN
   L.circleMarker([40.7282, -73.7949], {radius: boroData[3]}).addTo(map); //QUEENS
@@ -93,6 +92,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
       }
       console.log("lower clicked");
       clicked = true;
+      makeMap(data);
       document.getElementById("nextButton").style.visibility="visible";
       document.getElementById("map").style.visibility="visible";
       document.getElementById("maptitle").innerHTML = "cool map";

@@ -32,7 +32,12 @@ def get_borough(zip_code):
 sumMode = True
 richmond = True
 connection_id = "nu7n-tubp" 
-results = client.get(connection_id, limit=100000, breedname="Afghan Hound")
+query = "breedname='Puggle'"
+limit = 100000
+
+# Fetch the data based on the query
+results = client.get(connection_id, where=query, limit=limit)
+#results = client.get(connection_id, limit=100000, breedname="Afghan Hound")
 results_df = pd.DataFrame.from_records(results)
 results_df['borough'] = results_df['zipcode'].apply(get_borough)
 print(results_df.head(5))
@@ -64,4 +69,4 @@ else:
 borose = [Brooklyn, Bronx, Manhattan, Queens, StatenIsland]
 print(borose)
 
-db_tools.add_db_data("Afghan_hounds", borose)
+db_tools.add_db_data("Puggles", borose)

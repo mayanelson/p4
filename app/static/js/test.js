@@ -26,6 +26,8 @@ window.addEventListener("DOMContentLoaded", (event) => {
   }
   else {
   hButton.addEventListener("click", function() {
+      hButton.innerHTML =  `The real number for ${boro_name1}: ${sample}`
+      lButton.innerHTML = `The real number for ${boro_name2}: ${sample2}`
       if (sample > sample2) {
           document.getElementById("para").innerHTML = "DING DING DING";
           document.getElementById("para").style.color = "green";
@@ -48,6 +50,8 @@ window.addEventListener("DOMContentLoaded", (event) => {
   }
   else {
   lButton.addEventListener("click", function() {
+      hButton.innerHTML =  `The real number for ${boro_name1}: ${sample}`
+      lButton.innerHTML = `The real number for ${boro_name2}: ${sample2}`
       if (sample > sample2) {
           document.getElementById("para").innerHTML = "WRONG";
           document.getElementById("para").style.color = "red";

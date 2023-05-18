@@ -1,4 +1,34 @@
 // make button work
+function makeMap(data){
+  data.shift();
+  var boroData = data.map(function(x){
+    return parseInt(x, 10);
+  });
+  //console.log(boroData)
+  console.log(boroData)
+  const max = Math.max.apply(Math, boroData)
+  const scaler = 50;
+  //console.log(max);
+
+  boroData =  data.map(function(x){
+    return (x / max) * scaler;
+  });
+  console.log(boroData);
+  //console.log(boroData[0])
+  var map = L.map('map').setView([40.71, -74.00], 11);
+
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+      }).addTo(map);
+  bkNormal = data;
+  L.circleMarker([40.7781, -73.9712], {radius: boroData[2]}).addTo(map); //MANHATTAN
+  L.circleMarker([40.6782, -73.9442], {radius: boroData[0]}).addTo(map); //BROOKLYN
+  L.circleMarker([40.7282, -73.7949], {radius: boroData[3]}).addTo(map); //QUEENS
+  L.circleMarker([40.5795, -74.1502], {radius: boroData[4]}).addTo(map); //STATEN ISLAND
+  L.circleMarker([40.8448, -73.8648], {radius: boroData[1]}).addTo(map); // BRONX
+
+}
 window.addEventListener("DOMContentLoaded", (event) => {
   var hButton = document.getElementById("higherButton"); 
   var lButton = document.getElementById("lowerButton"); 
@@ -36,6 +66,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
       }
       clicked = true;
       //map.style.display = "inline-block";
+      makeMap(data);
       console.log("higher clicked");
       document.getElementById("nextButton").style.visibility="visible";
       document.getElementById("map").style.visibility="visible";

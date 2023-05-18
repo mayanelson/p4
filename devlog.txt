@@ -110,3 +110,14 @@ mayaN -- 2023-05-16 9:00
 map on game page with working circles!! cleaned up misc
 errors
 ==============================================================
+
+mayaN + ameerA -- 2023-05-8 9:00
+--------------------------------------------------------------
+We noticed that a lot of teams are mapping their datasets, with 
+varying APIs to map it. I noticed some using Leaflet, geomapify, 
+and others. We also found out that there is a Danceability metric
+measured by Spotify. Props go to Casino Royale for having a quirky
+project that we hope ends up well with the NBA mapping real time 
+statistics. 
+==============================================================
+

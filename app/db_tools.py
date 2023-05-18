@@ -6,7 +6,7 @@ DB_FILE = "data.db"
 #db = sqlite3.connect(DB_FILE, check_same_thread=False) #sqlite3.connect(DB_FILE)
 #c = db.cursor()
 
-boros = ["Brooklyn", "Bronx", "Manhattan", "Queens", "Staten Island"]
+boros = ["Brooklyn", "The Bronx", "Manhattan", "Queens", "Staten Island"]
 stories_header = "(storyName TEXT, fullStory TEXT, lastAdded TEXT, Contributors TEXT)"
 users_header = ("(username TEXT, password TEXT)")
 db_header = ("(Name TEXT, Brookyln TEXT, Bronx TEXT, Manhattan TEXT, Queens TEXT, Staten Island TEXT)")
@@ -63,12 +63,30 @@ def get_random_data():
     data_index = sample(range(n_rows), 1)[0]
     return dbs[data_index]
 def convert_name(db_name):
-    converter = {}
-    if db_name in converter:
-        return converter[db_name]
+    if db_name == "Average_Pay":
+        return "Is average public employee pay higher in "
     else:
-        print("db name is not valid, conversion could not be completed")
-        return -1
+        s = "Are there more "
+        if db_name == "Asbestos":
+            s += "asbestos abasements done"
+        elif db_name == "Buses":
+            s += "bus breakdowns/delays"
+        elif db_name == "Elevators":
+            s += "elevator permits given out"
+        elif db_name == "Film_Permits":
+            s += "film permits given out"
+        elif db_name == "rats":
+            s += "rat inspections done"
+        elif db_name == "recycling_bins":
+            s += "public recycling bins"
+        elif db_name == "Trees":
+            s += "street trees"
+        elif db_name == "Water_Fountains":
+            s += "public drinking fountains"
+        else:
+            return "COULD NOT CONVERT NAME"
+        s += " in "
+    return s
 def get_random_boros(boro_data):
     boro_indices = sample(range(len(boros)), 2)
     return {boros[boro_indices[0]]: boro_data[boro_indices[0]], boros[boro_indices[1]]: boro_data[boro_indices[1]]}

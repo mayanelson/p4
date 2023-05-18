@@ -15,7 +15,7 @@ function makeMap(data){
   });
   console.log(boroData);
   //console.log(boroData[0])
-  var map = L.map('map').setView([40.71, -74.00], 11);
+  var map = L.map('map').setView([40.71, -74.00], 10);
 
   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 19,

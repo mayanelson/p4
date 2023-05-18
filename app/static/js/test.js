@@ -7,7 +7,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
   var sample = boro_data1
   var sample2 = boro_data2
   console.log()
-  var str = `Are there more ${db_name} in ${boro_name1} or ${boro_name2}`
+  var str = `${db_name} in ${boro_name1} or ${boro_name2}`
 
   hButton.innerHTML = boro_name1
   lButton.innerHTML = boro_name2
@@ -36,8 +36,6 @@ window.addEventListener("DOMContentLoaded", (event) => {
       }
       clicked = true;
       //map.style.display = "inline-block";
-      mapDiv.style.height = "";  
-      map.invalidateSize()
       console.log("higher clicked");
       document.getElementById("nextButton").style.visibility="visible";
       document.getElementById("map").style.visibility="visible";
@@ -60,8 +58,6 @@ window.addEventListener("DOMContentLoaded", (event) => {
       }
       console.log("lower clicked");
       clicked = true;
-      mapDiv.style.height = "";  
-      map.invalidateSize()  
       document.getElementById("nextButton").style.visibility="visible";
       document.getElementById("map").style.visibility="visible";
       document.getElementById("maptitle").innerHTML = "cool map";

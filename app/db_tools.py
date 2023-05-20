@@ -73,7 +73,7 @@ def convert_name(db_name):
     else:
         s = "Are there more "
         if db_name == "Asbestos":
-            s += "asbestos abasements done"
+            s += "asbestos abatements done"
         elif db_name == "Buses":
             s += "school bus breakdowns/delays"
         elif db_name == "Elevators":

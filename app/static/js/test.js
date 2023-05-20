@@ -28,7 +28,14 @@ function makeMap(data){
   L.circleMarker([40.8448, -73.8648], {radius: boroData[1]}).addTo(map); // BRONX
 
 }
+
 window.addEventListener("DOMContentLoaded", (event) => {
+  streak = localStorage.getItem("streak");
+  document.getElementById("streak").innerHTML = `Streak: ${streak}`;
+  num_streak = Number(streak);
+  console.log(`the streak before guessing is ${streak}`)
+
+  //streak = Number(document.getElementById("streak").innerHTML);
   var hButton = document.getElementById("higherButton"); 
   var lButton = document.getElementById("lowerButton"); 
   var nextButton = document.getElementById("nextButton");
@@ -60,16 +67,16 @@ window.addEventListener("DOMContentLoaded", (event) => {
       if (Number(sample) >= Number(sample2)) {
           document.getElementById("para").innerHTML = "DING DING DING";
           document.getElementById("para").style.color = "green";
-          console.log(`${boro_name1}'s ${sample} is greater than ${boro_name2}'s ${sample2}`)
-          console.log(`Sample1 plus sample2 is ${sample + sample2}`)
-
+          console.log(`${boro_name1}'s ${sample} is greater than ${boro_name2}'s ${sample2}`);
+          num_streak += 1;
+          console.log(`num_streak is ${num_streak}`);
       }
       else {
           document.getElementById("para").innerHTML = "WRONG";
           document.getElementById("para").style.color = "red";
-          console.log(`${boro_name1}'s ${sample} is less than ${boro_name2}'s ${sample2}`)
-          console.log(`Sample1 plus sample2 is ${sample + sample2}`)
-
+          console.log(`${boro_name1}'s ${sample} is less than ${boro_name2}'s ${sample2}`);
+          num_streak = 0;
+          console.log(`num_streak is ${num_streak}`);
       }
       clicked = true;
       //map.style.display = "inline-block";
@@ -78,7 +85,14 @@ window.addEventListener("DOMContentLoaded", (event) => {
       document.getElementById("nextButton").style.visibility="visible";
       document.getElementById("map").style.visibility="visible";
       document.getElementById("maptitle").innerHTML = "cool map";
+      console.log(`num_streak is ${num_streak}`);
+      streak = num_streak.toString();
+      console.log(`streak is ${streak}`)
+      localStorage.setItem("streak", streak);
+      console.log(`streak after guessing is ${localStorage.getItem("streak")}`);
+      document.getElementById("streak").innerHTML = `Streak: ${streak}`;
     });
+
   }
   
   if (lButton == null) {
@@ -92,13 +106,15 @@ window.addEventListener("DOMContentLoaded", (event) => {
           document.getElementById("para").innerHTML = "WRONG";
           document.getElementById("para").style.color = "red";
           console.log(`${boro_name1}'s ${sample} is greater than ${boro_name2}'s ${sample2}`)
-          console.log(`Sample1 plus sample2 is ${sample + sample2}`)
+          num_streak = 0;
+          console.log(`num_streak is ${num_streak}`);
       }
       else {
           document.getElementById("para").innerHTML = "DING DING DING";
           document.getElementById("para").style.color = "green";
           console.log(`${boro_name1}'s ${sample} is less than ${boro_name2}'s ${sample2}`)
-          console.log(`Sample1 plus sample2 is ${sample + sample2}`)
+          num_streak += 1;
+          console.log(`num_streak is ${num_streak}`);
 
       }
       console.log("lower clicked");
@@ -107,7 +123,14 @@ window.addEventListener("DOMContentLoaded", (event) => {
       document.getElementById("nextButton").style.visibility="visible";
       document.getElementById("map").style.visibility="visible";
       document.getElementById("maptitle").innerHTML = "cool map";
+      console.log(`num_streak is ${num_streak}`);
+      streak = num_streak.toString();
+      console.log(`streak is ${streak}`)
+      localStorage.setItem("streak", streak);
+      console.log(`streak after guessing is ${localStorage.getItem("streak")}`);
+      document.getElementById("streak").innerHTML = `Streak: ${streak}`;
     });
+
   }
 
   if (nextButton == null) {

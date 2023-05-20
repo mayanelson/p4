@@ -57,13 +57,19 @@ window.addEventListener("DOMContentLoaded", (event) => {
   hButton.addEventListener("click", function() {
       hButton.innerHTML =  `The real number for ${boro_name1}: ${sample}`
       lButton.innerHTML = `The real number for ${boro_name2}: ${sample2}`
-      if (sample > sample2) {
+      if (Number(sample) >= Number(sample2)) {
           document.getElementById("para").innerHTML = "DING DING DING";
           document.getElementById("para").style.color = "green";
+          console.log(`${boro_name1}'s ${sample} is greater than ${boro_name2}'s ${sample2}`)
+          console.log(`Sample1 plus sample2 is ${sample + sample2}`)
+
       }
       else {
           document.getElementById("para").innerHTML = "WRONG";
           document.getElementById("para").style.color = "red";
+          console.log(`${boro_name1}'s ${sample} is less than ${boro_name2}'s ${sample2}`)
+          console.log(`Sample1 plus sample2 is ${sample + sample2}`)
+
       }
       clicked = true;
       //map.style.display = "inline-block";
@@ -82,13 +88,18 @@ window.addEventListener("DOMContentLoaded", (event) => {
   lButton.addEventListener("click", function() {
       hButton.innerHTML =  `The real number for ${boro_name1}: ${sample}`
       lButton.innerHTML = `The real number for ${boro_name2}: ${sample2}`
-      if (sample > sample2) {
+      if (Number(sample) > Number(sample2)) {
           document.getElementById("para").innerHTML = "WRONG";
           document.getElementById("para").style.color = "red";
+          console.log(`${boro_name1}'s ${sample} is greater than ${boro_name2}'s ${sample2}`)
+          console.log(`Sample1 plus sample2 is ${sample + sample2}`)
       }
       else {
           document.getElementById("para").innerHTML = "DING DING DING";
           document.getElementById("para").style.color = "green";
+          console.log(`${boro_name1}'s ${sample} is less than ${boro_name2}'s ${sample2}`)
+          console.log(`Sample1 plus sample2 is ${sample + sample2}`)
+
       }
       console.log("lower clicked");
       clicked = true;

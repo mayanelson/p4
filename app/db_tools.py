@@ -65,6 +65,8 @@ def get_random_data():
 def convert_name(db_name):
     if db_name == "Average_Pay":
         return "Is average public employee pay higher in "
+    elif (db_name == "Murder_Complaints"):
+        return "Were there more murders in 2022 in "
     else:
         s = "Are there more "
         if db_name == "Asbestos":
@@ -83,6 +85,10 @@ def convert_name(db_name):
             s += "street trees"
         elif db_name == "Water_Fountains":
             s += "public drinking fountains"
+        elif db_name == "Arson":
+            s += "incidents of arson (since 2009)"
+        elif db_name == "Puggles":
+            s += "Puggles (pug/beagle mixes)"
         else:
             return "COULD NOT CONVERT NAME"
         s += " in "

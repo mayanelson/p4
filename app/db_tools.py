@@ -68,18 +68,20 @@ def convert_name(db_name):
         return "Is average public employee pay higher "
     elif (db_name == "Murder_Complaints"):
         return "Were there more murders in 2022 "
+    elif (db_name == "Firefighters"):
+        return "Is average firefighter pay higher"
     else:
         s = "Are there more "
         if db_name == "Asbestos":
             s += "asbestos abasements done"
         elif db_name == "Buses":
-            s += "bus breakdowns/delays"
+            s += "school bus breakdowns/delays"
         elif db_name == "Elevators":
             s += "elevator permits given out"
         elif db_name == "Film_Permits":
             s += "film permits given out"
         elif db_name == "rats":
-            s += "rat inspections done"
+            s += "rat inspections failed"
         elif db_name == "recycling_bins":
             s += "public recycling bins"
         elif db_name == "Trees":
@@ -94,6 +96,10 @@ def convert_name(db_name):
             s += "firehouses"
         elif db_name == "Fires_Started":
             s += "fires started by careless children"
+        elif db_name == "PoliceOfficers":
+            s += "police officers who work in"
+        elif db_name == "Samdogs":
+            s += "dogs named Sam"
         else:
             return "COULD NOT CONVERT NAME"
         #s += " in "

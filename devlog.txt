@@ -127,6 +127,13 @@ project that we hope ends up well with the NBA mapping real time
 statistics. 
 ==============================================================
 
+samL -- 2023-05-16 16:38
+--------------------------------------------------------------
+Added circles in the map after the user makes a choice.  Had
+to do a lot more linking between the frontend and the backend
+to make this possible
+==============================================================
+
 samC -- 2023-05-20 18:00
 --------------------------------------------------------------
 Added in a few new datsets, and added a streak tracker using localstorage. Now 17 (I think) unique questions can be asked

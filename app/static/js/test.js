@@ -4,14 +4,15 @@ window.addEventListener("DOMContentLoaded", (event) => {
   var lButton = document.getElementById("lowerButton"); 
   var nextButton = document.getElementById("nextButton");
   var mappy = document.getElementById("map");
-  var sample = boro_data1
-  var sample2 = boro_data2
+  var sample = boro_data1;
+  var sample2 = boro_data2;
   console.log()
   var str = `${db_name} in ${boro_name1} or ${boro_name2}`
 
   hButton.innerHTML = boro_name1
   lButton.innerHTML = boro_name2
   var clicked = false;
+  var counter = 0;
 
   
       
@@ -29,10 +30,12 @@ window.addEventListener("DOMContentLoaded", (event) => {
       if (sample > sample2) {
           document.getElementById("para").innerHTML = "DING DING DING";
           document.getElementById("para").style.color = "green";
+          counter ++;
       }
       else {
           document.getElementById("para").innerHTML = "WRONG";
           document.getElementById("para").style.color = "red";
+          counter --;
       }
       clicked = true;
       //map.style.display = "inline-block";
@@ -51,10 +54,12 @@ window.addEventListener("DOMContentLoaded", (event) => {
       if (sample > sample2) {
           document.getElementById("para").innerHTML = "WRONG";
           document.getElementById("para").style.color = "red";
+          counter --;
       }
       else {
           document.getElementById("para").innerHTML = "DING DING DING";
           document.getElementById("para").style.color = "green";
+          counter ++;
       }
       console.log("lower clicked");
       clicked = true;

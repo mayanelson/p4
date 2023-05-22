@@ -45,14 +45,15 @@ window.addEventListener("DOMContentLoaded", (event) => {
   var lButton = document.getElementById("lowerButton"); 
   var nextButton = document.getElementById("nextButton");
   var mappy = document.getElementById("map");
-  var sample = boro_data1
-  var sample2 = boro_data2
+  var sample = boro_data1;
+  var sample2 = boro_data2;
   console.log()
   var str = `${db_name} in ${boro_name1} or ${boro_name2}`
 
   hButton.innerHTML = boro_name1
   lButton.innerHTML = boro_name2
   var clicked = false;
+  var counter = 0;
 
   
       
@@ -72,16 +73,24 @@ window.addEventListener("DOMContentLoaded", (event) => {
       if (Number(sample) >= Number(sample2)) {
           document.getElementById("para").innerHTML = "DING DING DING";
           document.getElementById("para").style.color = "green";
+<<<<<<< HEAD
+          counter ++;
+=======
           console.log(`${boro_name1}'s ${sample} is greater than ${boro_name2}'s ${sample2}`);
           num_streak += 1;
           console.log(`num_streak is ${num_streak}`);
+>>>>>>> 46a5b2c52aaabffc0105eab7aabf7972cfce6c54
       }
       else {
           document.getElementById("para").innerHTML = "WRONG";
           document.getElementById("para").style.color = "red";
+<<<<<<< HEAD
+          counter --;
+=======
           console.log(`${boro_name1}'s ${sample} is less than ${boro_name2}'s ${sample2}`);
           num_streak = 0;
           console.log(`num_streak is ${num_streak}`);
+>>>>>>> 46a5b2c52aaabffc0105eab7aabf7972cfce6c54
       }
       clicked = true;
       //map.style.display = "inline-block";
@@ -110,17 +119,25 @@ window.addEventListener("DOMContentLoaded", (event) => {
       if (Number(sample) > Number(sample2)) {
           document.getElementById("para").innerHTML = "WRONG";
           document.getElementById("para").style.color = "red";
+<<<<<<< HEAD
+          counter --;
+=======
           console.log(`${boro_name1}'s ${sample} is greater than ${boro_name2}'s ${sample2}`)
           num_streak = 0;
           console.log(`num_streak is ${num_streak}`);
+>>>>>>> 46a5b2c52aaabffc0105eab7aabf7972cfce6c54
       }
       else {
           document.getElementById("para").innerHTML = "DING DING DING";
           document.getElementById("para").style.color = "green";
+<<<<<<< HEAD
+          counter ++;
+=======
           console.log(`${boro_name1}'s ${sample} is less than ${boro_name2}'s ${sample2}`)
           num_streak += 1;
           console.log(`num_streak is ${num_streak}`);
 
+>>>>>>> 46a5b2c52aaabffc0105eab7aabf7972cfce6c54
       }
       console.log("lower clicked");
       clicked = true;

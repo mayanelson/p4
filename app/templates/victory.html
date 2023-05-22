@@ -21,7 +21,15 @@
             <form action="/">
                 <input class ="btn-primary btn-lg btn-block body-center text-center" type="submit" value = "im done go back">
             </form>
-            <h1 class="home-heading">YOU WON AND GOT XXX POINTS </h1>
+            <h1 class="home-heading" id="msg">YOU WON AND GOT </h1>
+            <script> 
+            streak = localStorage.getItem("max_streak");
+            win_message = document.getElementById("msg");
+            win_message.innerHTML = `YOU WON AND GOT ${streak} POINTS`
+            
+            </script> 
+            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<lottie-player src="https://assets7.lottiefiles.com/packages/lf20_CDRhVX7ga4.json"  background="transparent"  speed="1"  style="width: 800px; height: 800px; margin:auto"  autoplay loop></lottie-player>
 
         </div>
         <br>

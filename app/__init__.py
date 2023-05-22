@@ -22,6 +22,10 @@ def game():
 def map():
     return render_template('map.html')
 
+@app.route("/victory", methods=["GET","POST"])
+def victory():
+    return render_template('victory.html')
+
 if __name__ == "__main__":  # true if this file NOT imported
     app.debug = True        # enable auto-reload upon code change
     app.run()

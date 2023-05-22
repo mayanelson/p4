@@ -6,7 +6,9 @@ app = Flask(__name__)
 @app.route("/")       
 def hello_world():
     return render_template('main.html')
-
+@app.route("/victory")
+def victory():
+    return render_template('victory.html')
 # redirect to game
 @app.route("/game", methods=["GET","POST"])       
 def game():

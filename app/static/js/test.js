@@ -31,12 +31,7 @@ function makeMap(data){
 
 window.addEventListener("DOMContentLoaded", (event) => {
   streak = localStorage.getItem("streak");
-  if (streak == null){
-    document.getElementById("streak").innerHTML = `Streak: 0`;
-  }
-  else{
-    document.getElementById("streak").innerHTML = `Streak: ${streak}`;
-  }
+  document.getElementById("streak").innerHTML = `Streak: ${streak}`;
   num_streak = Number(streak);
   console.log(`the streak before guessing is ${streak}`)
 
@@ -73,13 +68,19 @@ window.addEventListener("DOMContentLoaded", (event) => {
           document.getElementById("para").innerHTML = "DING DING DING";
           document.getElementById("para").style.color = "green";
           console.log(`${boro_name1}'s ${sample} is greater than ${boro_name2}'s ${sample2}`);
+          console.log("going to victory");  
           num_streak += 1;
           console.log(`num_streak is ${num_streak}`);
+          
       }
       else {
           document.getElementById("para").innerHTML = "WRONG";
           document.getElementById("para").style.color = "red";
           console.log(`${boro_name1}'s ${sample} is less than ${boro_name2}'s ${sample2}`);
+          if(num_streak >= 10){
+            window.location.replace('/victory');
+            localStorage.setItem("max_streak", num_streak)
+          }
           num_streak = 0;
           console.log(`num_streak is ${num_streak}`);
       }
@@ -111,6 +112,10 @@ window.addEventListener("DOMContentLoaded", (event) => {
           document.getElementById("para").innerHTML = "WRONG";
           document.getElementById("para").style.color = "red";
           console.log(`${boro_name1}'s ${sample} is greater than ${boro_name2}'s ${sample2}`)
+          if(num_streak >= 10){
+            window.location.replace('/victory')
+            localStorage.setItem("max_streak", num_streak)
+          }
           num_streak = 0;
           console.log(`num_streak is ${num_streak}`);
       }

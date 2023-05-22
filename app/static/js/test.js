@@ -73,24 +73,16 @@ window.addEventListener("DOMContentLoaded", (event) => {
       if (Number(sample) >= Number(sample2)) {
           document.getElementById("para").innerHTML = "DING DING DING";
           document.getElementById("para").style.color = "green";
-<<<<<<< HEAD
-          counter ++;
-=======
           console.log(`${boro_name1}'s ${sample} is greater than ${boro_name2}'s ${sample2}`);
           num_streak += 1;
           console.log(`num_streak is ${num_streak}`);
->>>>>>> 46a5b2c52aaabffc0105eab7aabf7972cfce6c54
       }
       else {
           document.getElementById("para").innerHTML = "WRONG";
           document.getElementById("para").style.color = "red";
-<<<<<<< HEAD
-          counter --;
-=======
           console.log(`${boro_name1}'s ${sample} is less than ${boro_name2}'s ${sample2}`);
           num_streak = 0;
           console.log(`num_streak is ${num_streak}`);
->>>>>>> 46a5b2c52aaabffc0105eab7aabf7972cfce6c54
       }
       clicked = true;
       //map.style.display = "inline-block";
@@ -119,25 +111,17 @@ window.addEventListener("DOMContentLoaded", (event) => {
       if (Number(sample) > Number(sample2)) {
           document.getElementById("para").innerHTML = "WRONG";
           document.getElementById("para").style.color = "red";
-<<<<<<< HEAD
-          counter --;
-=======
           console.log(`${boro_name1}'s ${sample} is greater than ${boro_name2}'s ${sample2}`)
           num_streak = 0;
           console.log(`num_streak is ${num_streak}`);
->>>>>>> 46a5b2c52aaabffc0105eab7aabf7972cfce6c54
       }
       else {
           document.getElementById("para").innerHTML = "DING DING DING";
           document.getElementById("para").style.color = "green";
-<<<<<<< HEAD
-          counter ++;
-=======
           console.log(`${boro_name1}'s ${sample} is less than ${boro_name2}'s ${sample2}`)
           num_streak += 1;
           console.log(`num_streak is ${num_streak}`);
 
->>>>>>> 46a5b2c52aaabffc0105eab7aabf7972cfce6c54
       }
       console.log("lower clicked");
       clicked = true;

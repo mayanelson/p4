@@ -105,13 +105,19 @@ mayaN + ameerA -- 2023-05-16 9:00
 failed at implementing borough overlays
 ==============================================================
 
+samL -- 2023-05-16 16:38
+--------------------------------------------------------------
+Added name Converter to format the database names properly on 
+the site
+==============================================================
+
 mayaN -- 2023-05-16 9:00
 --------------------------------------------------------------
 map on game page with working circles!! cleaned up misc
 errors
 ==============================================================
 
-mayaN + ameerA -- 2023-05-8 9:00
+mayaN + ameerA -- 2023-05-18 9:00
 --------------------------------------------------------------
 We noticed that a lot of teams are mapping their datasets, with 
 varying APIs to map it. I noticed some using Leaflet, geomapify, 
@@ -121,3 +127,19 @@ project that we hope ends up well with the NBA mapping real time
 statistics. 
 ==============================================================
 
+samL -- 2023-05-16 16:38
+--------------------------------------------------------------
+Added circles in the map after the user makes a choice.  Had
+to do a lot more linking between the frontend and the backend
+to make this possible
+==============================================================
+
+samC -- 2023-05-20 18:00
+--------------------------------------------------------------
+Added in a few new datsets, and added a streak tracker using localstorage. Now 17 (I think) unique questions can be asked
+==============================================================
+
+mayaN + ameerA -- 2023-05-22 9:00
+--------------------------------------------------------------
+finishing touches!!
+==============================================================

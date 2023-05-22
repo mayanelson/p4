@@ -29,9 +29,9 @@
                 <input class ="btn-primary btn-lg btn-block body-center text-center" type="submit" value = "im done go back">
             </form>
             <h1 class="heading">Time to play! </h1>
-
         <br>
-
+        <h2 id="streak">Streak: </h2>
+        <br>
         <h1 id="text">  </h2>
             <br>    
         <!--BOX AROUND THIS AND BOOTSTRAP BUTTON-->
@@ -41,6 +41,7 @@
             var boro_name2 = "{{boro_keys[1]}}"
             var boro_data1 = "{{boro_data[0]}}"
             var boro_data2 = "{{boro_data[1]}}"
+            var data = {{data|tojson}}
         </script>
         <script src="static/js/test.js"></script>
 
@@ -68,21 +69,7 @@
 
         <script>
 
-            var map = L.map('map').setView([40.71, -74.00], 11);
-
-            L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                maxZoom: 19,
-                attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-                }).addTo(map);
-
-            L.circleMarker([40.7781, -73.9712], {radius: 20}).addTo(map); //MANHATTAN
-            L.circleMarker([40.6782, -73.9442], {radius: 20}).addTo(map); //BROOKLYN
-            L.circleMarker([40.7282, -73.7949], {radius: 20}).addTo(map); //QUEENS
-            L.circleMarker([40.5795, -74.1502], {radius: 20}).addTo(map); //STATEN ISLAND
-            L.circleMarker([40.8448, -73.8648], {radius: 20}).addTo(map); // BRONX
-
         </script>
-
 
 
 <br>

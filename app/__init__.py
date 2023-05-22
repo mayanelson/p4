@@ -15,8 +15,7 @@ def game():
     print(boro_data)
     boro_keys = list(boro_data)
     converted_name = db_tools.convert_name(data[0])
-    return render_template('game.html', db_name=converted_name, boro_data=list(boro_data.values()), boro_keys=boro_keys)
-
+    return render_template('game.html', db_name=converted_name, boro_data=list(boro_data.values()), boro_keys=boro_keys, data=data)
 # redirect to map
 @app.route("/map", methods=["GET","POST"])       
 def map():

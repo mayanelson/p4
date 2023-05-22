@@ -24,6 +24,7 @@ def create_table(name, header):
     query(f"CREATE TABLE IF NOT EXISTS {name} {header}")
 
 create_table("DBInfo", db_header)
+create_table("DBTest", db_header)
 #create_table("UserInfo", users_header)
 create_table("Police", db_header)
 create_table("Water_Fountains", db_header)
@@ -64,28 +65,44 @@ def get_random_data():
     return dbs[data_index]
 def convert_name(db_name):
     if db_name == "Average_Pay":
-        return "Is average public employee pay higher in "
+        return "Is average public employee pay higher "
+    elif (db_name == "Murder_Complaints"):
+        return "Were there more murders in 2022 "
+    elif (db_name == "Firefighters"):
+        return "Is average firefighter pay higher"
     else:
         s = "Are there more "
         if db_name == "Asbestos":
-            s += "asbestos abasements done"
+            s += "asbestos abatements done"
         elif db_name == "Buses":
-            s += "bus breakdowns/delays"
+            s += "school bus breakdowns/delays"
         elif db_name == "Elevators":
             s += "elevator permits given out"
         elif db_name == "Film_Permits":
             s += "film permits given out"
         elif db_name == "rats":
-            s += "rat inspections done"
+            s += "rat inspections failed"
         elif db_name == "recycling_bins":
             s += "public recycling bins"
         elif db_name == "Trees":
             s += "street trees"
         elif db_name == "Water_Fountains":
             s += "public drinking fountains"
+        elif db_name == "Arson":
+            s += "incidents of arson (since 2009)"
+        elif db_name == "Puggles":
+            s += "puggles (pug/beagle mixes)"
+        elif db_name == "Firehouses":
+            s += "firehouses"
+        elif db_name == "Fires_Started":
+            s += "fires started by careless children"
+        elif db_name == "PoliceOfficers":
+            s += "police officers who work in"
+        elif db_name == "Samdogs":
+            s += "dogs named Sam"
         else:
             return "COULD NOT CONVERT NAME"
-        s += " in "
+        #s += " in "
     return s
 def get_random_boros(boro_data):
     boro_indices = sample(range(len(boros)), 2)
@@ -105,6 +122,17 @@ def add_db_data(db_name, db_data):
         #add_db_data(db_name, db_data)
         print("did not add")
         return -1
+    
+def add_test_data(db_name, db_data):
+    if not(db_exists(db_name)):
+        print("adding?")
+        print(query(f"INSERT INTO DBTest VALUES (?, ?, ?, ?, ?, ?)", (db_name, db_data[0], db_data[1], db_data[2], db_data[3], db_data[4])))
+    else:
+        #create_table(db_name. db_header)
+        #add_db_data(db_name, db_data)
+        print("did not add")
+        return -1
+    
 def update_db_data(db_name, db_data):
     if db_exists(db_name):
         query(f'''

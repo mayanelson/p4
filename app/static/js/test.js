@@ -40,14 +40,15 @@ window.addEventListener("DOMContentLoaded", (event) => {
   var lButton = document.getElementById("lowerButton"); 
   var nextButton = document.getElementById("nextButton");
   var mappy = document.getElementById("map");
-  var sample = boro_data1
-  var sample2 = boro_data2
+  var sample = boro_data1;
+  var sample2 = boro_data2;
   console.log()
   var str = `${db_name} in ${boro_name1} or ${boro_name2}`
 
   hButton.innerHTML = boro_name1
   lButton.innerHTML = boro_name2
   var clicked = false;
+  var counter = 0;
 
   
       

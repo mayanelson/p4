@@ -73,3 +73,10 @@ stylesheet so we could customize our site to our liking */
 a{
     text-decoration:none;
 }
+
+.paraText{
+    background-color: #49B8F8;
+    padding: 20px;
+    border-radius: 20px;
+    color: #15598E;
+}

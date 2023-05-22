@@ -31,7 +31,12 @@ function makeMap(data){
 
 window.addEventListener("DOMContentLoaded", (event) => {
   streak = localStorage.getItem("streak");
-  document.getElementById("streak").innerHTML = `Streak: ${streak}`;
+  if (streak == null){
+    document.getElementById("streak").innerHTML = `Streak: 0`;
+  }
+  else{
+    document.getElementById("streak").innerHTML = `Streak: ${streak}`;
+  }
   num_streak = Number(streak);
   console.log(`the streak before guessing is ${streak}`)
 

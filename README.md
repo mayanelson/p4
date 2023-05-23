@@ -7,7 +7,7 @@ Inspired by the higher or lower game, our project will feature an interactive ga
 ## Sam Cowan
 ## Ameer Alnasser
 
-Launch Codes:
+## Launch Codes:
 Run:
 ```java
  git clone git@github.com:mayanelson/p4.git

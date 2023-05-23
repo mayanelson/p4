@@ -18,6 +18,18 @@ NYC Higher Lower
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
 
+Changes from Original Design Doc -- 2023-05-23 18:21
+--------------------------------------------------------------
+- Switched to comparing boroughs from neighborhoods
+- Scrapped idea of second game w/ correlation coefficients
+- Changed dataset design to remove latitude, longitude
+- Standardized dataset to six columns, with a row name and a column for each of the five boroughs
+- Switched to procuring data w/ API rather than csv import
+- Added 9 new datasets, removed taxi driver dataset (did not work well for data manipulation)
+- Replaced leaderboard with victory page
+- PUGGLES
+==============================================================
+
 ameerA -- 2023-05-04 8:47 
 --------------------------------------------------------------
 Noted our feedback from devlog, we need to:

@@ -40,9 +40,8 @@ window.addEventListener("DOMContentLoaded", (event) => {
   var lButton = document.getElementById("lowerButton"); 
   var nextButton = document.getElementById("nextButton");
   var mappy = document.getElementById("map");
-  var sample = boro_data1;
-  var sample2 = boro_data2;
-  console.log()
+  var sample = Math.round(Number(boro_data1));
+  var sample2 = Math.round(Number(boro_data2));
   var str = `${db_name} in ${boro_name1} or ${boro_name2}`
 
   hButton.innerHTML = boro_name1
@@ -65,7 +64,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
   hButton.addEventListener("click", function() {
       hButton.innerHTML =  `The real number for ${boro_name1}: ${sample}`
       lButton.innerHTML = `The real number for ${boro_name2}: ${sample2}`
-      if (Number(sample) >= Number(sample2)) {
+      if (sample >= sample2) {
           document.getElementById("para").innerHTML = "DING DING DING";
           document.getElementById("para").style.color = "green";
           console.log(`${boro_name1}'s ${sample} is greater than ${boro_name2}'s ${sample2}`);
@@ -109,7 +108,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
   lButton.addEventListener("click", function() {
       hButton.innerHTML =  `The real number for ${boro_name1}: ${sample}`
       lButton.innerHTML = `The real number for ${boro_name2}: ${sample2}`
-      if (Number(sample) > Number(sample2)) {
+      if (sample > sample2) {
           document.getElementById("para").innerHTML = "WRONG";
           document.getElementById("para").style.color = "red";
           console.log(`${boro_name1}'s ${sample} is greater than ${boro_name2}'s ${sample2}`)

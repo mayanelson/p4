@@ -100,6 +100,10 @@ def convert_name(db_name):
             s += "police officers who work in"
         elif db_name == "Samdogs":
             s += "dogs named Sam"
+        elif db_name == "Stevedogs":
+            s += "dogs named Steve"
+        elif db_name == "MayaDogs":
+            s += "dogs named Maya"
         else:
             return "COULD NOT CONVERT NAME"
         #s += " in "
